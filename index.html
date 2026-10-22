@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhostTasker Pro — Hardware-Level Auto-Typer for Citrix, Locked IDEs & Web Forms</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#090B10',
+                        cardbg: '#111520',
+                        cardalt: '#161B2A',
+                        accent: '#4F6EF7',
+                        accenthover: '#637FF9'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkbg text-gray-100 font-sans antialiased selection:bg-accent selection:text-white">
+
+    <!-- Top Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-darkbg/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-xl bg-indigo-950 border border-indigo-700 flex items-center justify-center text-accent font-bold text-lg">⚡</div>
+                <div>
+                    <span class="font-bold text-base tracking-tight block leading-none">GhostTasker Pro</span>
+                    <span class="text-[11px] text-gray-400">Windows Typing & Excel Assistant</span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#test-box" class="hidden sm:inline text-sm text-gray-300 hover:text-white transition">Live Test</a>
+                <a href="#download" class="text-sm font-semibold text-gray-300 hover:text-white transition">Free Trial</a>
+                <a href="#pricing" class="bg-accent hover:bg-accenthover text-white text-sm font-semibold px-4 py-2 rounded-xl transition shadow-lg shadow-indigo-500/20">Get Pro — $19</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-flex items-center space-x-2 bg-indigo-950/70 border border-indigo-800/70 rounded-full px-4 py-1.5 mb-6 text-xs font-semibold text-indigo-300">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Works on Citrix / RDP • Paste-Blocked Portals • Browser IDEs • Legacy Web Forms
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                Type Into Any Restricted Window & <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Fill Forms From Excel</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                When <code class="bg-gray-800 px-2 py-0.5 rounded text-gray-200">Ctrl+V</code> is disabled or browser extensions fail inside Citrix and remote sessions, GhostTasker Pro types your text and Excel rows using real OS-level keystrokes.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#download" class="w-full sm:w-auto bg-accent hover:bg-accenthover text-white font-bold px-8 py-4 rounded-xl transition shadow-xl shadow-indigo-500/30 text-center">
+                    ⬇️ Download Free Trial (500 Words)
+                </a>
+                <a href="#pricing" class="w-full sm:w-auto bg-cardbg hover:bg-gray-800 border border-gray-800 font-bold px-8 py-4 rounded-xl transition text-center">
+                    💎 Buy Lifetime Key — $19 (2 PCs)
+                </a>
+            </div>
+            <p class="text-xs text-gray-500 mt-4">Portable Windows 10/11 App (.exe) • No Installation Required • Instant Esc-Esc Panic Stop</p>
+        </div>
+    </section>
+
+    <!-- Interactive Paste-Block Test Box -->
+    <section id="test-box" class="py-10 px-6 max-w-4xl mx-auto">
+        <div class="bg-cardbg border border-gray-800 rounded-2xl p-6 shadow-2xl">
+            <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-800">
+                <div class="flex items-center space-x-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+                    <span class="text-xs text-gray-400 ml-2 font-mono">Paste-Restricted Portal Simulator</span>
+                </div>
+                <span class="text-xs text-emerald-400 font-semibold bg-emerald-950/50 border border-emerald-800 px-2.5 py-1 rounded-lg">Test F8 Here</span>
+            </div>
+            <div class="space-y-3">
+                <label class="text-sm font-medium text-gray-300">Try pressing <code class="text-red-400">Ctrl+V</code> inside this box (Paste is blocked). Then run GhostTasker Pro and press <code class="text-indigo-400">F8</code>:</label>
+                <textarea id="demo-box" placeholder="Click here and try Ctrl+V... Then test GhostTasker Pro's F8 hotkey!" class="w-full h-28 bg-darkbg border border-gray-800 rounded-xl p-4 text-sm text-gray-200 focus:outline-none focus:border-accent" onpaste="handleDemoPaste(event)"></textarea>
+                <p id="demo-notice" class="text-xs text-amber-400 font-mono min-h-[18px]"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 Core Use Cases (Matching Actual Features) -->
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-3">Built for Workflows Where Normal Copy-Paste Fails</h2>
+            <p class="text-gray-400 max-w-xl mx-auto">Designed for independent professionals, remote contractors, and students working on personal Windows PCs.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-cardbg border border-gray-800 p-6 rounded-2xl">
+                <div class="text-2xl mb-3">🖥️</div>
+                <h3 class="text-base font-bold mb-2">Citrix & Remote Desktop</h3>
+                <p class="text-xs text-gray-400 leading-relaxed">Run GhostTasker on your local home PC and type cleanly into remote Citrix/RDP windows where clipboard sharing is disabled.</p>
+            </div>
+            <div class="bg-cardbg border border-gray-800 p-6 rounded-2xl">
+                <div class="text-2xl mb-3">📊</div>
+                <h3 class="text-base font-bold mb-2">Excel/CSV Form Filler</h3>
+                <p class="text-xs text-gray-400 leading-relaxed">Load any <code class="text-gray-300">.xlsx</code> or <code class="text-gray-300">.csv</code> file. Press <code class="text-gray-300">F9</code> (or <code class="text-gray-300">F10</code>) to fill web form fields row-by-row with automatic Tab navigation.</p>
+            </div>
+            <div class="bg-cardbg border border-gray-800 p-6 rounded-2xl">
+                <div class="text-2xl mb-3">💻</div>
+                <h3 class="text-base font-bold mb-2">Smart IDE Code Mode</h3>
+                <p class="text-xs text-gray-400 leading-relaxed">Prevents broken indentation and duplicate auto-closed brackets when typing code into browser-based coding editors.</p>
+            </div>
+            <div class="bg-cardbg border border-gray-800 p-6 rounded-2xl">
+                <div class="text-2xl mb-3">🛡️</div>
+                <h3 class="text-base font-bold mb-2">Full Safety Controls</h3>
+                <p class="text-xs text-gray-400 leading-relaxed">Includes Window Lock (stops if focus changes), Pause on Mouse Move, Bookmark Resume, and instant <code class="text-gray-300">Esc-Esc</code> panic stop.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download & SmartScreen Trust Section (Solves the 70% Drop-Off Pothole!) -->
+    <section id="download" class="py-16 px-6 max-w-4xl mx-auto">
+        <div class="bg-cardalt border border-indigo-500/40 rounded-2xl p-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-3">Try GhostTasker Pro Free (500 Words Included)</h2>
+            <p class="text-sm text-gray-400 mb-6">Test every feature—including Excel Row Filler and Citrix Mode—on your own workflow before buying.</p>
+            
+            <!-- REPLACE href WITH YOUR GITHUB RELEASE .EXE LINK -->
+            <a href="GhostTasker_Pro.exe" download class="inline-block bg-white text-darkbg font-extrabold px-8 py-4 rounded-xl hover:bg-gray-200 transition shadow-xl mb-6">
+                ⬇️ Download GhostTasker_Pro.exe (Portable v1.0)
+            </a>
+
+            <!-- SmartScreen Transparency Guide -->
+            <div class="bg-darkbg border border-gray-800 rounded-xl p-5 text-left max-w-2xl mx-auto mt-4">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">💡 Quick Note on Windows SmartScreen</span>
+                    <span class="text-[11px] bg-emerald-950 text-emerald-400 border border-emerald-800 px-2 py-0.5 rounded">100% Local • No Data Uploaded</span>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed mb-3">
+                    Because GhostTasker Pro is an independent portable utility that simulates hardware keystrokes, Windows Defender may show a blue <em>"Windows protected your PC"</em> prompt on first launch.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-gray-300 font-mono bg-cardbg p-3 rounded-lg border border-gray-800">
+                    <div>1. Click <span class="text-indigo-400 underline">More info</span> on the blue prompt.</div>
+                    <div>2. Click <span class="text-emerald-400 font-bold">Run anyway</span> to launch instantly.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 px-6 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-3">One-Time Payment. Lifetime License.</h2>
+            <p class="text-sm text-gray-400">No recurring subscriptions. Instant license key delivery after checkout.</p>
+        </div>
+        <div class="bg-cardbg border border-indigo-500/50 p-8 rounded-2xl max-w-lg mx-auto shadow-xl shadow-indigo-500/10">
+            <div class="flex justify-between items-center mb-4">
+                <div>
+                    <h3 class="text-xl font-bold">GhostTasker Pro Lifetime</h3>
+                    <p class="text-xs text-gray-400">2 PC Activations Included (Work + Home)</p>
+                </div>
+                <div class="text-3xl font-extrabold text-white">$19 <span class="text-xs font-normal text-gray-400">USD</span></div>
+            </div>
+            <ul class="space-y-2.5 text-sm text-gray-300 my-6 border-t border-b border-gray-800 py-5">
+                <li>✅ Unlimited human-cadence typing (<code class="text-xs">F8</code>)</li>
+                <li>✅ Unlimited Excel & CSV row filling (<code class="text-xs">F9 / F10 / F7</code>)</li>
+                <li>✅ Citrix / Remote Desktop & Smart IDE modes</li>
+                <li>✅ Local Wi-Fi Phone Camera OCR Bridge</li>
+                <li>✅ Activate on 2 PCs + Self-serve device unlink anytime</li>
+            </ul>
+            <!-- REPLACE href WITH YOUR LEMONSQUEEZY CHECKOUT URL -->
+            <a href="https://lemonsqueezy.com" target="_blank" class="block w-full bg-accent hover:bg-accenthover text-white font-bold py-4 rounded-xl transition text-center shadow-lg shadow-indigo-500/30">
+                Buy Lifetime License Key — $19
+            </a>
+            <p class="text-[11px] text-gray-500 text-center mt-3">Includes all future v1.x updates • Self-serve device switching built into the app</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-xs text-gray-600 border-t border-gray-900">
+        <p>GhostTasker Pro • All text and OCR processing happens locally on your PC.</p>
+    </footer>
+
+    <!-- ZERO-HUMAN-CHAT AUTOMATED FAQ ASSISTANT WIDGET -->
+    <div class="fixed bottom-5 right-5 z-50">
+        <div id="bot-window" class="hidden w-80 sm:w-96 bg-cardbg border border-gray-700 rounded-2xl shadow-2xl mb-3 overflow-hidden">
+            <div class="bg-indigo-950/90 px-4 py-3 border-b border-gray-800 flex justify-between items-center">
+                <span class="font-bold text-sm text-white">⚡ GhostTasker Instant Answers</span>
+                <button onclick="toggleBot()" class="text-gray-400 hover:text-white text-lg leading-none">&times;</button>
+            </div>
+            <div class="p-4 space-y-3 max-h-96 overflow-y-auto text-xs">
+                <p class="text-gray-300">Click any question below for an instant answer:</p>
+                <button onclick="showAns(1)" class="w-full text-left bg-darkbg hover:bg-gray-800 p-2.5 rounded-lg border border-gray-800 text-indigo-300 font-medium">1. Will it work inside Citrix / Remote Desktop?</button>
+                <button onclick="showAns(2)" class="w-full text-left bg-darkbg hover:bg-gray-800 p-2.5 rounded-lg border border-gray-800 text-indigo-300 font-medium">2. Why does Windows show a blue SmartScreen popup?</button>
+                <button onclick="showAns(3)" class="w-full text-left bg-darkbg hover:bg-gray-800 p-2.5 rounded-lg border border-gray-800 text-indigo-300 font-medium">3. How do I move my license to a new computer?</button>
+                <button onclick="showAns(4)" class="w-full text-left bg-darkbg hover:bg-gray-800 p-2.5 rounded-lg border border-gray-800 text-indigo-300 font-medium">4. What if F9 conflicts with Excel?</button>
+                <div id="bot-answer" class="bg-indigo-950/40 border border-indigo-800/50 rounded-xl p-3 text-gray-200 leading-relaxed hidden"></div>
+            </div>
+        </div>
+        <button onclick="toggleBot()" class="bg-accent hover:bg-accenthover text-white font-bold px-4 py-3 rounded-full shadow-xl flex items-center space-x-2 ml-auto">
+            <span>💬</span>
+            <span class="text-xs">Instant Help / FAQ</span>
+        </button>
+    </div>
+
+    <script>
+        function handleDemoPaste(e) {
+            e.preventDefault();
+            const notice = document.getElementById('demo-notice');
+            notice.innerText = "🛑 Paste Blocked! Normal Ctrl+V cannot enter text here. Open GhostTasker Pro, save text, click here, and press F8!";
+        }
+        function toggleBot() {
+            document.getElementById('bot-window').classList.toggle('hidden');
+        }
+        function showAns(id) {
+            const box = document.getElementById('bot-answer');
+            box.classList.remove('hidden');
+            const answers = {
+                1: "Yes! Run GhostTasker_Pro.exe on your personal Windows PC (outside Citrix), turn ON 'Remote Desktop / Citrix mode' in the right panel, click inside your Citrix window, and press F8.",
+                2: "New indie .exe files trigger a standard Windows SmartScreen check until thousands of downloads occur. Click 'More info' -> 'Run anyway'. GhostTasker runs 100% locally and never uploads your text.",
+                3: "Your $19 key works on 2 PCs at the same time. To move it to a 3rd PC, open GhostTasker Pro -> 'License Key' tab -> click 'Remove from this PC'. That slot frees up immediately in the cloud!",
+                4: "Inside the 'Excel to Form' tab, use the 'Shortcut Key' dropdown at the top-right to switch the trigger key from F9 to F10 or F7 in one click."
+            };
+            box.innerText = answers[id];
+        }
+    </script>
+</body>
+</html>
