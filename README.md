@@ -11,8 +11,8 @@ Browser extensions fail when clipboard sharing is blocked at the remote session 
 ---
 
 ## 🌐 Live Interactive Demo & Official Download
-👉 **[Launch Official Website & Paste-Blocked Simulator](https://YOUR-GITHUB-USERNAME.github.io/ghosttasker-pro/)**  
-⬇️ **[Direct Download: GhostTasker_Pro.exe (Portable v1.0)](https://github.com/YOUR-GITHUB-USERNAME/ghosttasker-pro/releases/latest)**
+👉 **[Launch Official Website & Paste-Blocked Simulator](https://lalit-raikwar.github.io/ghosttarker-pro/)**  
+⬇️ **[Direct Download: GhostTasker_Pro.exe (Portable v1.0)](https://github.com/lalit-raikwar/ghosttarker-pro/releases/download/v1.0/GhostTasker_Pro.exe)**
 
 ---
 
